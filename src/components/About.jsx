@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -5,7 +6,10 @@ const About = () => {
 
       {/* HERO */}
       <section className="about__hero">
+        
         <div className="about__hero-content">
+          <Link to="/">Back</Link>
+          <br />
           <span className="about__label">ABOUT SHOPLY</span>
 
           <h1>

@@ -1,37 +1,10 @@
+import Products from "./Products";
 
-
-const products = [
-  {
-    id: 1,
-    name: "Classic Sneakers",
-    price: "$79.99",
-    image:
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-  },
-  {
-    id: 2,
-    name: "Modern Watch",
-    price: "$129.99",
-    image:
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
-  },
-  {
-    id: 3,
-    name: "Leather Backpack",
-    price: "$89.99",
-    image:
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
-  },
-  {
-    id: 4,
-    name: "Minimal Headphones",
-    price: "$99.99",
-    image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
-  },
-];
 
 const Body = () => {
+
+  
+
   return (
     <main className="body">
       {/* HERO */}
@@ -75,33 +48,9 @@ const Body = () => {
           </div>
         </div>
       </section>
+      
+      <Products/>
 
-      {/* PRODUCTS */}
-      <section id="shop" className="products">
-        <h2 className="section-title">Featured Products</h2>
-
-        <div className="products-grid">
-          {products.map((product) => (
-            <div className="product-card" key={product.id}>
-              <img
-                src={product.image}
-                alt={product.name}
-                className="product-image"
-              />
-
-              <div className="product-info">
-                <h3>{product.name}</h3>
-
-                <p className="product-price">{product.price}</p>
-
-                <button className="cart-button">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
     </main>
   );
 };

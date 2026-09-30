@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
+import Cart from "./Cart";
+import { useContext } from "react"
+import { CartContext } from "../Context"
 
 const Header = () => {
+
+  const {visible, setVisible} = useContext(CartContext);
+
   return (
     <header className="header">
       <div className="header__container">
@@ -20,7 +26,10 @@ const Header = () => {
 
         {/* ACTIONS */}
         <div className="header__actions">
-          <button className="header__button">
+          <button 
+          className="header__button"
+          onClick={() => setVisible(visible === "none" ? "block" : "none")}
+          >
             🛒
           </button>
 
@@ -30,6 +39,8 @@ const Header = () => {
         </div>
 
       </div>
+
+      <Cart />
     </header>
   );
 };
