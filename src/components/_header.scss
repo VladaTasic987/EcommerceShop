@@ -58,6 +58,14 @@
     gap: 10px;
   }
 
+  // CART WRAPPER
+
+  .cart_wrapper {
+    position: relative;
+  }
+
+  // BUTTONS
+
   &__button {
     width: 40px;
     height: 40px;
@@ -81,6 +89,7 @@
   }
 }
 
+
 // TABLET
 
 @media (max-width: 768px) {
@@ -103,6 +112,7 @@
     }
   }
 }
+
 
 // MOBILE
 
@@ -129,6 +139,10 @@
       position: absolute;
       right: 6%;
       top: 16px;
+    }
+
+    .cart_wrapper {
+      position: relative;
     }
   }
 }
